@@ -1,5 +1,5 @@
-import Head from 'next/head'
-import { CMS_NAME, HOME_OG_IMAGE_URL } from '../lib/constants'
+import Head from "next/head";
+import { BASE_URL, CMS_NAME } from "../lib/constants";
 
 const Meta = () => {
   return (
@@ -36,9 +36,9 @@ const Meta = () => {
         name="description"
         content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content={`${BASE_URL}/api/og`} />
     </Head>
-  )
-}
+  );
+};
 
-export default Meta
+export default Meta;
